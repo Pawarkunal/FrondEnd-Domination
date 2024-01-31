@@ -1,2 +1,2 @@
 # FrondEnd-Domination
- Sheriyans Frond Assignments & Projects
+ Sheriyans FrontEnd Assignments & Projects
