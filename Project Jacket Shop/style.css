@@ -12,21 +12,21 @@ html,body{
 #main{
     height: 100%;
     width: 100%;
-    background-color: rgb(245, 243, 239);
+    background-color: rgb(246, 246, 246);
 }
 
 #nav{
-    height: 80px;
+    height: 4.17vw;
     width: 100%;
     display: flex;
     gap: 30px;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 50px;
+    padding: 20px 50px;
 }
 
 #nav h4{
-    font-size: 16px;
+    font-size: 1.111vw;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
@@ -34,7 +34,7 @@ html,body{
 #nav i{
     background-color: rgb(14, 13, 13);
     color: white;
-    font-size: 20 px;
+    font-size: 1.39vw;
     border-radius: 50%;
     padding: 10px;
 }
@@ -46,7 +46,7 @@ html,body{
 
 #center h1{
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 4.5vw;
+    font-size: 4vw;
     font-weight: 500;
 }
 
@@ -59,9 +59,9 @@ html,body{
 
 #center-down p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 25px;
+    font-size: 1.11vw;
+    font-weight: 300;
+    line-height: 1.74vw;
 }
 
 #right{
@@ -79,14 +79,14 @@ html,body{
 
 .elem a{
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-size: 1.25vw;
     text-decoration: none;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .elem i{
-    font-size: 20px;
+    font-size: 1.39vw;
     font-weight: 100;
     opacity: 0;
 }
@@ -94,16 +94,72 @@ html,body{
 .elem:hover i{
     opacity: 1;
 }
-.elem:hover{
-    background-color: rgb(236, 236, 236);
-}
 
 #bottom{
-    height: 35.5%;
+    height: 39.8%;
 }
 #bottom img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: 0 30%;
+}
+
+@media (max-width:600px) {
+    #nav{
+        gap: 20px;
+        padding: 25px 20px;
+    }
+    
+    #nav h4{
+        display: none;
+    }
+    #nav i{
+        font-size: 4vw;
+        padding: 5px;
+    }
+    #center{
+        padding: 0 30px;
+    }
+    
+    #center h1{
+        font-size: 9vw;
+    }
+
+    #center-down{
+        margin-top: 30px;
+        padding-left: 30px;
+        flex-direction: column;
+    }
+    
+    #center-down p{
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+    
+    #right{
+        width: 100%;
+        padding-top: 30px;
+    }
+    
+    .elem{
+        border-top: 1px solid rgb(0, 0, 0);
+        padding: 10px 0;
+    }
+    
+    .elem a{
+        font-size: 3vw;
+    }
+    
+    .elem i{
+        font-size: 2.5vw;
+    }
+    #bottom{
+        height: 48%;
+        padding-top:3vh;
+    }
+    #bottom img{
+        object-fit:cover;
+        object-position:60%;
+    }
 }
