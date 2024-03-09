@@ -278,7 +278,7 @@ body{
 }
 #page2 .box:hover{
     cursor: pointer;
-    box-shadow: .5px .5px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
 
 }
 #page2 .auto-truncate {
