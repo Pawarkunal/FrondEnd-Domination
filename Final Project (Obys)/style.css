@@ -286,9 +286,8 @@ html, body {
     width: 33vw;
     background-color: #3F7DF4;
     position: relative;
-    left: 34%;
-    top: -30vh;
-    /* bottom: -10vh; */
+    margin-left: 34%;
+    margin-top: -30vh;
     padding: 4.5vw 4vw;
 }
 
@@ -311,4 +310,19 @@ html, body {
     width: 40%;
     font-weight: 100;
     font-size: 1vw;
+}
+.underline:nth-last-child(2){
+    margin-bottom: 4vh;
+}
+#page4 #page4-container h5{
+    font-size: 1.1vw;
+    font-weight: 100;
+}
+
+/* ****** PAGE 5 ******** */
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 15vh;
 }
