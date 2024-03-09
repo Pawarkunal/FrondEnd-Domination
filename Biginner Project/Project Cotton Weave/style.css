@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.918);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 7.5vh 8vw;
+    padding-right: 15vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#left{
+    height: 100%;
+    width: 45%;
+    /* background-color: brown; */
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#left h1{
+    font-size:8vw;
+    font-weight: 500;
+    line-height: 8vw;
+}
+
+#bottom{
+    height: 35%;
+    width: 100%;
+    /* background-color: rgb(18, 221, 75); */
+}
+#color{
+    padding: 5px 10px;
+    /* background-color: aliceblue; */
+    width: fit-content;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid black;
+}
+
+#color h5{
+    font-weight: 500px;
+    margin: 3px;
+}
+#color1{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: grey;
+}
+#color2{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color:coral;
+}
+#bottom2 h4{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#bottom2 p{
+    font-size: 14px;
+    width: 70%;
+    line-height: 18px;
+}
+#right{
+    margin-top: 15vh;
+    height: 100%;
+    width: 40%;
+    /* background-color: yellowgreen; */
+    position: relative;
+}
+
+#right-top{
+    height: 50px;
+    width: 100%;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+}
+
+#right-top h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#right-top h5{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#right img{
+    width: 100%;
+    height: 92.4%;
+    object-fit: cover;
+}
+
+#black-circle{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: rgb(24, 26, 35);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    right: -80px;
+}
+#black-circle h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#rotated{
+    position: absolute;
+    left: -40px;
+    bottom: 6px;
+    font-weight: 500;
+    width: fit-content;
+    /* background-color: rebeccapurple; */
+    transform-origin: 0 0;
+    rotate: -90deg;
+}
+
+@media (max-width:600px) {
+    #main{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.918);
+        padding: 0 0;
+        flex-direction: column;
+    }
+    
+    #left{
+        height: 80%;
+        width: 95%;
+        /* background-color: brown; */
+        padding: 0 0;
+        padding-top: 4vh;
+        margin-top: 0;
+        justify-content:flex-start;
+    }
+    #left h1{
+        font-size:10vh;
+        font-weight: 500;
+        line-height: 8vh;
+    }
+    
+    #bottom{
+        height: 50%;
+        padding-top: 4vh;
+        /* background-color: rgb(18, 221, 75); */
+    }
+    #color{
+        padding: 3px 6px;
+        /* background-color: aliceblue; */
+    }
+    
+    #color h5{
+        font-weight: 500;
+        margin: 2px;
+    }
+    #color1{
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: grey;
+    }
+    #color2{
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color:coral;
+    }
+    #bottom2 h4{
+        margin-top: 12px;
+        margin-bottom: 2px;
+        font-weight: 600;
+    }
+    
+    #bottom2 p{
+        font-size: 12px;
+        width: 85%;
+        line-height: 14px;
+    }
+    #right{
+        margin-top: 20px;
+        height:60%;
+        width:85%;
+        /* background-color: yellowgreen; */
+    }
+    
+    #right-top{
+        height: 30px;
+        /* background-color: brown; */
+    }
+    
+    #right-top h4{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    #right-top h5{
+        font-weight: 500;
+        font-size: 12px;
+    }
+    
+    #right img{
+        width: 100%;
+        height: 78%;
+    }
+    
+    #black-circle{
+        height: 35px;
+        width: 100px;
+        border-radius: 8px;
+        top:48vh;
+        right: 1px;
+    }
+    #black-circle h4{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    
+    #rotated{
+        left: 4px;
+        top: 86%;
+        font-size: 16px;
+        font-weight: 600;
+        width: fit-content;
+        rotate: 0deg;
+    }
+}
+
+

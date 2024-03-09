@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(246, 246, 246);
+}
+
+#nav{
+    height: 4.17vw;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+#nav h4{
+    font-size: 1.111vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+#nav i{
+    background-color: rgb(14, 13, 13);
+    color: white;
+    font-size: 1.39vw;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+#center{
+    width: 100%;
+    padding: 0 100px;
+}
+
+#center h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+#center-down{
+    margin-top: 20px;
+    padding-left: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#center-down p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.11vw;
+    font-weight: 300;
+    line-height: 1.74vw;
+}
+
+#right{
+    width: 25%;
+    padding-right: 50px;
+}
+
+.elem{
+    border-top: 2px solid black;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.elem a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 1.25vw;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.elem i{
+    font-size: 1.39vw;
+    font-weight: 100;
+    opacity: 0;
+}
+
+.elem:hover i{
+    opacity: 1;
+}
+
+#bottom{
+    height: 39.8%;
+}
+#bottom img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 30%;
+}
+
+@media (max-width:600px) {
+    #nav{
+        gap: 20px;
+        padding: 25px 20px;
+    }
+    
+    #nav h4{
+        display: none;
+    }
+    #nav i{
+        font-size: 4vw;
+        padding: 5px;
+    }
+    #center{
+        padding: 0 30px;
+    }
+    
+    #center h1{
+        font-size: 9vw;
+    }
+
+    #center-down{
+        margin-top: 30px;
+        padding-left: 30px;
+        flex-direction: column;
+    }
+    
+    #center-down p{
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+    
+    #right{
+        width: 100%;
+        padding-top: 30px;
+    }
+    
+    .elem{
+        border-top: 1px solid rgb(0, 0, 0);
+        padding: 10px 0;
+    }
+    
+    .elem a{
+        font-size: 3vw;
+    }
+    
+    .elem i{
+        font-size: 2.5vw;
+    }
+    #bottom{
+        height: 48%;
+        padding-top:3vh;
+    }
+    #bottom img{
+        object-fit:cover;
+        object-position:60%;
+    }
+}
