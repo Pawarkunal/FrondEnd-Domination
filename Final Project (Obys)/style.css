@@ -324,5 +324,46 @@ html, body {
 #page5{
     min-height: 100vh;
     width: 100%;
-    padding-top: 15vh;
+    padding-top: 13vh;
+}
+#page5 .slide{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2.5vw;
+}
+#page5 .slide h1, #page5 .slider h1{
+    display: inline-block;
+    /* background-color: red; */
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    margin-left: 2vw;
+    animation: sliding 18s infinite linear;
+}
+
+@keyframes sliding {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 2vw));
+    }
+}
+
+#page5 .slider{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2.5vw;
+}
+#page5 .slider h1{
+    transform: translateX(calc(-100% - 2vw));
+    animation-direction: reverse;
+}
+
+#page5 .slide span, #page5 .slider span{
+    font-family: 'Silk Serif';
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
 }

@@ -467,10 +467,11 @@ body{
     padding: 2.5vh 0;
     padding-left: 3vw;
     display: inline-block;
-    animation-name: scroller;
+    /* animation-name: scroller;
     animation-duration: 20s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
+    animation: 20s scroller infinite linear;
     margin-bottom: 7.5vh;
 }
 @keyframes scroller {
