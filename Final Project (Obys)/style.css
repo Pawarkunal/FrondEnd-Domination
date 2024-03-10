@@ -118,6 +118,7 @@ html, body {
 #page1{
     height: 100vh;
     width: 100%;
+    position: relative;
 }
 
 #nav{
@@ -142,29 +143,30 @@ html, body {
     font-weight: 200;
 }
 
-.hero{
+.hero-container{
     /* background-color: red; */
-    height: fit-content;
-    width: 72%;
-    margin-left: 28%;
-    overflow: hidden;
+    width: 67vw;
+    /* margin-left: 28%;
+    margin-right: 5%; */
+    margin: 15vh 5% 0 28%;
     position: relative;
 }
 
-.hero h1{
+.hero-container h1{
     font-size: 7.5vw;
     text-transform: uppercase;
     line-height: 7.2vw;
     font-weight: 500;
 }
-.hero:nth-child(2){
-    margin-top: 8vw;
+.hero-container::before{
+    content: "01";
+    position: absolute;
+    left: -10vw;
+    font-family: 'Silk Serif';
+    font-size: 3.5vw;
 }
-
-.hero:nth-child(4){
+.hero-container .hero{
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 .border-bottom:nth-child(1){
     margin-right: .6vw;
@@ -172,7 +174,7 @@ html, body {
 .border-bottom{
     border-bottom: .6vw solid white;
     padding-bottom: .2vw;
-    transition: all ease 1s;
+    transition: all ease .5s;
 }
 
 .border-bottom:hover{
@@ -246,6 +248,14 @@ html, body {
     margin-left: 28%;
     margin-right: 5%;
     position: relative;
+}
+#page4 #page4-container::before{
+    content: "03";
+    position: absolute;
+    left: -12vw;
+    top: .8vw;
+    font-family: 'Silk Serif';
+    font-size: 3.5vw;
 }
 #page4 #page4-container h1{
     font-size: 7.5vw;
@@ -366,4 +376,65 @@ html, body {
     font-family: 'Silk Serif';
     -webkit-text-stroke: 1px #fff;
     color: transparent;
+}
+
+#footer{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 7vh;
+}
+#footer #footer-container{
+    width: 67vw;
+    margin-left: 28%;
+    margin-right: 5%;
+    position: relative;
+}
+
+#footer #footer-container::before{
+    content: "04";
+    position: absolute;
+    left: -12vw;
+    top: 1.4vw;
+    font-family: 'Silk Serif';
+    font-size: 3.5vw;
+}
+#footer #footer-container .topper{
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+#footer #footer-container h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#footer #footer-container h1:hover{
+    font-family: 'Silk Serif';
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+#footer #footer-container #grid-box{
+    height: 37vh;
+    display: grid;
+    padding-top: 2vw;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: 20% 80%;
+    grid-row-gap: 1vw;
+    /* background-color: red; */
+}
+#footer #footer-container h4{
+    margin-top: 2vw;
+    font-weight: 100;
+}
+.socials, .address, .hi{
+    align-self: center;
+}
+
+.first p, .second p, .third p{
+    font-size: 1.8vw;
+    line-height:1.8vw;
+    font-weight: 100;
 }
