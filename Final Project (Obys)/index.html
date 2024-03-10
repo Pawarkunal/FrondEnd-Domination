@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 </head>
 <body>
-    <!-- <div id="loader">
+    <div id="loader">
         <div class="line">
             <div id="line-counter">
                 <h5 id="counter-num">00</h5>
@@ -28,7 +27,7 @@
         <div id="loader-footer">
             <h6>Please wait <br>a few seconds.</h6>
         </div>
-    </div> -->
+    </div>
     <div id="main">
         <div id="crsr"></div>
         <div id="page1">
@@ -50,15 +49,21 @@
                         <h4>Contacts</h4>
                     </div>
             </div>
-            <div class="hero-container">
-                <h1>we design</h1>
-                <h1>unique</h1>
+            <div id="hero-container">
                 <div class="hero">
-                    <h1 class="border-bottom">Web</h1>
-                    <h1>/</h1>
-                    <h1 class="border-bottom">graphic</h1>
+                    <h1>we design</h1>
                 </div>
-                <h1>experience</h1>
+                <div class="hero">
+                    <h1>unique</h1>
+                </div>
+                <div class="hero">
+                    <h1 id="special-border">Web</h1>
+                    <h1>/</h1>
+                    <h1 id="special-border">graphic</h1>
+                </div>
+                <div class="hero">
+                    <h1>experience</h1>
+                </div>
             </div>
         </div>
         <div id="page2">
@@ -199,6 +204,8 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 

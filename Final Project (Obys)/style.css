@@ -10,7 +10,6 @@ html, body {
     width: 100%;
     font-family: 'Plain';
 }
-
 #crsr{
     position: absolute;
     height: 2vw;
@@ -113,12 +112,13 @@ html, body {
 
 #main{
     position: relative;
-    background-color: #151515;
+    background-color: #000000;
 }
 #page1{
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     position: relative;
+    background-color: #151515;
 }
 
 #nav{
@@ -143,50 +143,67 @@ html, body {
     font-weight: 200;
 }
 
-.hero-container{
+#hero-container{
     /* background-color: red; */
     width: 67vw;
-    /* margin-left: 28%;
-    margin-right: 5%; */
     margin: 15vh 5% 0 28%;
     position: relative;
 }
 
-.hero-container h1{
+#hero-container h1{
     font-size: 7.5vw;
     text-transform: uppercase;
-    line-height: 7.2vw;
+    line-height: 6.5vw;
     font-weight: 500;
 }
-.hero-container::before{
+#hero-container::before{
     content: "01";
     position: absolute;
     left: -10vw;
     font-family: 'Silk Serif';
     font-size: 3.5vw;
 }
-.hero-container .hero{
+#hero-container .hero{
     display: flex;
-}
-.border-bottom:nth-child(1){
-    margin-right: .6vw;
-}
-.border-bottom{
-    border-bottom: .6vw solid white;
-    padding-bottom: .2vw;
-    transition: all ease .5s;
+    overflow: hidden;
+    padding-bottom: 1vw;
+    height: 7.5vw;
 }
 
-.border-bottom:hover{
+#hero-container .hero #special-border:nth-child(1)::before{
+    content: "";
+    left: 2%;
+    top: 107%;
+    /* right: 0; */
+    height: 1vh;
+    width: 15vw;
+    position: absolute;
+    background-color: #fff;
+    transition: opacity 0.3s ease-in-out;
+}
+#hero-container .hero #special-border:nth-child(3)::before{
+    content: "";
+    left: -2%;
+    top: 107%;
+    /* right: 0; */
+    height: 1vh;
+    width: 34vw;
+    position: absolute;
+    background-color: #fff;
+    transition: opacity 0.3s ease-in-out;
+}
+#hero-container .hero #special-border:hover {
     -webkit-text-stroke: 1px white;
     color: transparent;
-    border-bottom: .6vw solid rgba(255, 255, 255, 0);
 }
 
+#hero-container .hero #special-border:hover::before {
+    opacity: 0;
+}
 #page2{
     height: 100vh;
     width: 100%;
-    padding-top: 15vh;
+    padding-top: 5vh;
     position: relative;
     background-color:  #151515;
 }
@@ -212,14 +229,14 @@ html, body {
     object-fit: cover;
 }
 #page2 #video-container #video-cursor{
-    height: 9vw;
-    width: 9vw;
+    height: 10.5vw;
+    width: 10.5vw;
     border-radius: 50%;
     background-color: #FFA63D;
     position: absolute;
-    z-index: 9999;
-    left: 70%;
-    top: -12%;
+    z-index: 9;
+    left: 67%;
+    top: -18%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -242,6 +259,7 @@ html, body {
     width: 100%;
     position: relative;
     padding-top: 8vh;
+    background-color: #151515;
 }
 #page4 #page4-container{
     width: 67vw;
@@ -335,6 +353,7 @@ html, body {
     min-height: 100vh;
     width: 100%;
     padding-top: 13vh;
+    background-color: #151515;
 }
 #page5 .slide{
     white-space: nowrap;
@@ -383,6 +402,7 @@ html, body {
     width: 100%;
     position: relative;
     padding-top: 7vh;
+    background-color: #151515;
 }
 #footer #footer-container{
     width: 67vw;
