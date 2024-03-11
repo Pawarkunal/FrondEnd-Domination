@@ -94,6 +94,8 @@ tl.from("#hero-container",{
 }
 
 function cursorAnimation(){
+    let mouseFollow = document.querySelector("Shery.mouseFollower");
+    let video = document.querySelector("#video-container video");
     Shery.mouseFollower({
         //Parameters are optional.
         skew: true,
@@ -101,33 +103,49 @@ function cursorAnimation(){
         duration: .1,
       }); 
     Shery.makeMagnet("#nav-part2 h4");
+    let videoContainer = document.querySelector("#video-container");
+    videoContainer.addEventListener("mouseenter",function(){
+        videoContainer.addEventListener("mousemove",function(dets){
+            gsap.to(mouseFollow,{
+                opacity:0
+            })
+            gsap.to("#video-cursor",{
+                x:dets.x - 1200,
+                y:dets.y - 100
+            })
+        })
+    })
+    
+    videoContainer.addEventListener("mouseleave", function(){
+        gsap.to("#video-cursor",{
+            left: "67%",
+            top: "-18%"
+        })
+    })
 
-
-// let vidContainer = document.querySelector("#video-container");
-// vidContainer.addEventListener("mouseenter",function(){
-//     console.log("checking");
-//     vidContainer.addEventListener("mouseover", function(details){
-//         gsap.to(".mousefollower",{
-//             display: "none"
-//         })
-//         gsap.to("#video-cursor",{
-//             left: details.x - 500,
-//             y: details.y - 500
-//         })
-//     })
-// })
+    let flag = 0;
+    videoContainer.addEventListener("click",function(){
+        if(flag == 0){
+            video.play();
+            video.style.opacity = 1
+            document.querySelector("#video-cursor").innerHTML  = `<i class="ri-pause-line"></i>`;
+            gsap.to("#video-cursor",{
+                scale:0.5
+            })
+            flag = 1
+        }else{
+            video.pause();
+            video.style.opacity = 0
+            document.querySelector("#video-cursor").innerHTML  = `<i class="ri-play-fill"></i>`;
+            gsap.to("#video-cursor",{
+                scale:1
+            })
+            flag = 0
+        }
+    })
 }
 
-var vidContainer = document.getElementById('video-container');
-var vidCursor = document.getElementById('video-cursor');
 
-vidContainer.addEventListener('mousemove', function (e) {
-    console.log("hovering....")
-    var mouseX = e.clientX - 2000;
-    var mouseY = e.clientY - 2000;
-
-    vidCursor.style.transform = 'translate(' + mouseX + 'px, ' + mouseY + 'px)';
-});
 function sheryAnimation(){
     Shery.imageEffect(".image-line1 , .image-line2",{
         style: 5,
@@ -135,7 +153,29 @@ function sheryAnimation(){
         gooey:true
     })
 }
+
+
 loaderAnimation()
 cursorAnimation()
 locoAnimation()
 sheryAnimation() 
+
+let flag = document.querySelector("#flag");
+document.addEventListener("mousemove",function(dets){
+    gsap.to("#flag",{
+        x: dets.x,
+        y: dets.y
+    })
+})
+
+let heroHover = document.querySelector("#hero-hover");
+heroHover.addEventListener("mouseenter",function(){
+    gsap.to("#flag",{
+        opacity: 1
+    })
+})
+heroHover.addEventListener("mouseleave",function(){
+    gsap.to("#flag",{
+        opacity: 0
+    })
+})

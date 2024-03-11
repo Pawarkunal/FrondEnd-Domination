@@ -22,7 +22,7 @@ html, body {
 } */
 .mouseFollower{
     border: 2px solid white;
-    scale: 2;
+    scale: 10;
     background-color: transparent;
     mix-blend-mode: difference;
 }
@@ -200,7 +200,6 @@ html, body {
     -webkit-text-stroke: 1px white;
     color: transparent;
 }
-
 #hero-container .hero #special-border:hover::before {
     opacity: 0;
 }
@@ -218,21 +217,29 @@ html, body {
     position: relative;
     left: calc(100% - 70vw);
     background-color: red;
+    background-image: url(./assets/video-img.jpeg);
+    background-size: cover;
+    background-position: center;
 }
-
-#page2 #video-container img{
+#page2 #video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+/* #page2 #video-container img{
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
     top: 0;
-}
+} */
 
-#page2 #video-container video{
+/* #page2 #video-container video{
     height: calc(100% - 1px);
     width: 100%;
     object-fit: cover;
-}
+} */
 
 #page2 #video-container #video-cursor{
     height: 10.5vw;
@@ -240,7 +247,7 @@ html, body {
     border-radius: 50%;
     background-color: #FFA63D;
     position: absolute;
-    z-index: 99;
+    z-index: 999;
     left: 67%;
     top: -18%;
     display: flex;
@@ -663,4 +670,14 @@ html, body {
 ._canvas_container{
     z-index: 9999 !important;
     pointer-events: none;
+}
+
+#flag{
+    width: 20vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: -99;
+    opacity: 0;
 }
